@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des groupes</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Nom</th>
+        <th>Année</th>
+    </tr>
+    {% for g in groupe %}
+    <tr>
+        <td>{{ g.id }}</td>
+        <td><a href="{% url 'classe_list' g.id %}">{{ g.nom}}</a></td>
+        <td>{{ g.annee }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>

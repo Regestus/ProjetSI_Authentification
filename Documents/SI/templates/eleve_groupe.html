@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Eleve de la classe : {{ eleve.groupe }}{% endblock %}</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Classe</th>
+    </tr>
+    {% for eleve in liste_eleve %}
+    <tr>
+        <td>{{ eleve.nom }}</td>
+        <td>{{ eleve.prenom }}</td>
+        <td>{{ eleve.groupe }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+</body>
+</html>
